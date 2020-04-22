@@ -68,9 +68,10 @@ public class Main extends JFrame{
         {
             public void actionPerformed(ActionEvent e){
                 System.out.println("btn1");
-                // row.removeAll();
-                // row2.removeAll();
-                // row3.removeAll();
+                row.removeAll();
+                row2.removeAll();
+                //row3.removeAll();
+                
             }
         });
         btn2.addActionListener(new ActionListener()
