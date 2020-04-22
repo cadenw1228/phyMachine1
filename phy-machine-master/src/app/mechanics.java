@@ -36,6 +36,8 @@ public class mechanics {
                 idk4(dist,time,finalV,initV);
                 idk5(dist,time,acc,initV);
                 idk6(dist,acc,finalV,initV);
+                //Main.t2.setText("yes");
+                //System.out.println("yes");
             }
         });
     }
