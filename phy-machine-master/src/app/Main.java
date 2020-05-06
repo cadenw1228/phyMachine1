@@ -17,14 +17,19 @@ public class Main extends JFrame{
     static String[] forceLabels = {"force(newtons)","mass(kilograms)","acceleration((m/2)^2)","momentum(kg*m/2)","velocity(m/2)","impulse(kg*m/s)","Change in time(seconds)","kinetic energy(juels)","potential energy (juels)","distance(meters)","Power(watts)","Energy(juels)"};
     static JTextField[] f2 = new JTextField[12];
 
+    static String[] electricLabels = {"power(watts)","amps","volts","resistence(ohms)"};
+    static JTextField[] f3 = new JTextField[4];
+    
+
     static JButton btn = new JButton("check");
     static JButton btn1 = new JButton("mechanics");
     static JButton btn2 = new JButton("forces");
     static JButton btn3 = new JButton("electricity");
-    static JButton btn4 = new JButton("etc.");
+    static JButton btn4 = new JButton("idk.");
     static JLabel t2 = new JLabel();
     //electricity elec = new electricity();
     mechanics mech = new mechanics();
+    electricity elec = new electricity();
     final GridLayout layoutForce = new GridLayout(4,1,10,10);
     public Main() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -54,6 +59,7 @@ public class Main extends JFrame{
         row2.add(btn);
 
         mech.test();
+        elec.test();
         checker();
         row2.add(t2);
         add(row3);
@@ -114,7 +120,19 @@ public class Main extends JFrame{
         {
             public void actionPerformed(ActionEvent e){
                 System.out.println("btn3");
+                row.setVisible(false);
+                row.removeAll();
+                row.setLayout(layoutForce);
+                for (int i = 0; i < electricLabels.length; i++) {
+                    f3[i] = new JTextField();
+                    JLabel t1 = new JLabel(electricLabels[i]);
+                    row.add(t1);
+                    row.add(f3[i]);
+                }
+                //t2.setText("yes");
+                row.setVisible(true);
             }
+            
         });
         btn4.addActionListener(new ActionListener()
         {
