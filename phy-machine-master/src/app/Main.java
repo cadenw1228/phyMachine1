@@ -14,7 +14,7 @@ public class Main extends JFrame{
     static String[] mechLabels = {"Change in distance(meters)","Change in time(seconds)","velocity(m/s)","change in velocity","acceleration((m/2)^2)","final velocity", "inital velocity"};
     static JTextField[] f1 = new JTextField[7];
 
-    static String[] forceLabels = {"force(newtons)","mass(kilograms)","acceleration((m/2)^2)","momentum(kg*m/2)","velocity(m/2)","impulse(kg*m/s)","Change in time(seconds)","kinetic energy(juels)","potential energy (juels)","distance(meters)","Power(watts)","Energy(juels)"};
+    static String[] forceLabels = {"force(newtons)","mass(kilograms)","acceleration((m/2)^2)","momentum(kg*m/2)","velocity(m/2)","impulse(kg*m/s)","Change in time(seconds)","kinetic energy(juels)","potential energy (juels)","distance(meters)","Energy(juels)","Power(watts)"};
     static JTextField[] f2 = new JTextField[12];
 
     static String[] electricLabels = {"power(watts)","amps","volts","resistence(ohms)"};
