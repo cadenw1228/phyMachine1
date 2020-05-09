@@ -16,6 +16,7 @@ public class mechanics {
         Main.btn.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e){
+                if(Main.page == 0){
                 //dist
                 String dist = Main.f1[0].getText();
                 //time
@@ -36,8 +37,10 @@ public class mechanics {
                 idk4(dist,time,finalV,initV);
                 idk5(dist,time,acc,initV);
                 idk6(dist,acc,finalV,initV);
-                //Main.t2.setText("yes");
-                //System.out.println("yes");
+                //Main.t2.setText("");
+                System.out.println(Main.t2.getText());
+                System.out.println("yes");
+                }
             }
         });
     }

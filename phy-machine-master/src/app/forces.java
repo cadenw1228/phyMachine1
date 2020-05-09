@@ -8,7 +8,8 @@ public class forces {
         Main.btn.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e){
-                //
+                if(Main.page == 1){
+                    //
                 String force = Main.f2[0].getText();
                 //
                 String mass = Main.f2[1].getText();
@@ -39,6 +40,8 @@ public class forces {
                 idk5(PE,mass,dist);
                 idk6(energy,force,dist);
                 idk7(power,energy,Dtime);
+                }
+                
 
             }
             //

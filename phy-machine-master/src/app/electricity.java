@@ -10,10 +10,11 @@ public class electricity {
     static void total() {
         //Main.row.add(t1);
     }
-    public void test(){
+    public void test1(){
         Main.btn.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e){
+                if (Main.page == 2){
                 //dist
                 String power = Main.f3[0].getText();
                 //time
@@ -24,6 +25,7 @@ public class electricity {
                 String resitance = Main.f3[3].getText();
                 idk1(volts,amps,resitance);
                 idk2(power,amps,volts);
+                }
             }
         });
 

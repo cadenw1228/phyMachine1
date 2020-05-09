@@ -27,10 +27,12 @@ public class Main extends JFrame{
     static JButton btn3 = new JButton("electricity");
     static JButton btn4 = new JButton("idk.");
     static JLabel t2 = new JLabel();
-    //electricity elec = new electricity();
     mechanics mech = new mechanics();
     electricity elec = new electricity();
+    //forces forces = new forces();
     final GridLayout layoutForce = new GridLayout(4,1,10,10);
+
+    static int page = 0;
     public Main() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int height = (int)screenSize.getHeight();
@@ -59,7 +61,8 @@ public class Main extends JFrame{
         row2.add(btn);
 
         mech.test();
-        elec.test();
+        elec.test1();
+        //forces.test();
         checker();
         row2.add(t2);
         add(row3);
@@ -70,6 +73,7 @@ public class Main extends JFrame{
     }
 
     public static void main(final String[] args) throws Exception {
+        t2.setText("");
         final Main frame = new Main();
         //System.out.println("yes");
     }
@@ -80,7 +84,7 @@ public class Main extends JFrame{
         btn1.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e){
-                System.out.println("btn1");
+                //System.out.println("btn1");
                 row.setVisible(false);
                 row.removeAll();
                 for (int i = 0; i < mechLabels.length; i++) {
@@ -89,11 +93,11 @@ public class Main extends JFrame{
                     row.add(t1);
                     row.add(f1[i]);
                 }
-                //t2.setText("yes");
+                t2.setText("");
                 row.setVisible(true);
                 //row3.removeAll();
-                //t2.setText("yes");
-                
+                //t2.setText("");
+                page = 0;
                 
             }
         });
@@ -101,7 +105,7 @@ public class Main extends JFrame{
         btn2.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e){
-                System.out.println("btn2");
+                //System.out.println("btn2");
                 row.setVisible(false);
                 row.removeAll();
                 row.setLayout(layoutForce);
@@ -111,15 +115,17 @@ public class Main extends JFrame{
                     row.add(t1);
                     row.add(f2[i]);
                 }
-                //t2.setText("yes");
+                t2.setText("");
                 row.setVisible(true);
+                page = 1;
+
             }
         });
 
         btn3.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e){
-                System.out.println("btn3");
+                //System.out.println("btn3");
                 row.setVisible(false);
                 row.removeAll();
                 row.setLayout(layoutForce);
@@ -129,8 +135,9 @@ public class Main extends JFrame{
                     row.add(t1);
                     row.add(f3[i]);
                 }
-                //t2.setText("yes");
+                t2.setText("");
                 row.setVisible(true);
+                page = 2;
             }
             
         });
@@ -138,6 +145,7 @@ public class Main extends JFrame{
         {
             public void actionPerformed(ActionEvent e){
                 System.out.println("btn4");
+                page = 3;
             }
         });
     }
